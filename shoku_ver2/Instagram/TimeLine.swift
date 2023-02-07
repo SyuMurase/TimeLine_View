@@ -12,60 +12,62 @@ struct TimeLine: View {
     
     var body: some View {
         NavigationView {
-            NavigationLink(destination: SecondView()) {
-                VStack{
-                    HStack{
-                        VStack(alignment: .leading, spacing: 10, content: {
-                            Text("テスト")
-                                .font(.title2)
-                                .fontWeight(.bold)
+            VStack{
+                NavigationLink(destination: SecondView()) {
+                        HStack{
+                            VStack(alignment: .leading, spacing: 10, content: {
+                                Text("テスト")
+                                    .font(.title2)
+                                    .fontWeight(.bold)
+                                
+                                Text("テスと")
+                                    .font(.caption)
+                                    .lineLimit(3)
+                            })
+                            .background(Color.white)
+                            .opacity(10)
                             
-                            Text("テスと")
-                                .font(.caption)
-                                .lineLimit(3)
-                        })
-                        .background(Color.white)
-                        .opacity(10)
-                        
-                        Spacer(minLength: 10)
-                        
-                        Image("yatai")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 130, height: 130)
-                            .cornerRadius(10)
-                    }
-                    .padding(.horizontal)
-                    .background(Color.white)
-                    Divider()
-                    HStack{
-                        VStack(alignment: .leading, spacing: 10, content: {
-                            Text("テスト")
-                                .font(.title2)
-                                .fontWeight(.bold)
+                            Spacer(minLength: 10)
                             
-                            Text("テスと")
-                                .font(.caption)
-                                .lineLimit(3)
-                        })
-                        .background(Color.white)
-                        .opacity(10)
-                        
-                        Spacer(minLength: 10)
-                        
-                        Image("yatai")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 130, height: 130)
-                            .cornerRadius(10)
-                    }
-                    .padding(.horizontal)
-                    .background(Color.white)
-                    Divider()
+                            Image("yatai")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 130, height: 130)
+                                .cornerRadius(10)
+                        }
+                        .padding(.horizontal)
+                        .background(Color.red)
                 }
-                
-                
-                
+                NavigationLink(destination: ThirdView()) {
+                    VStack{
+                        HStack{
+                            VStack(alignment: .leading, spacing: 10, content: {
+                                Text("テスト")
+                                    .font(.title2)
+                                    .fontWeight(.bold)
+                                
+                                Text("テスと")
+                                    .font(.caption)
+                                    .lineLimit(3)
+                            })
+                            .background(Color.white)
+                            .opacity(10)
+                            
+                            Spacer(minLength: 10)
+                            
+                            Image("yatai")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 130, height: 130)
+                                .cornerRadius(10)
+                        }
+                        .padding(.horizontal)
+                        .background(Color.orange)
+                    }
+                    
+                    
+                    
+                }
             }
         }
     }
@@ -73,7 +75,13 @@ struct TimeLine: View {
 
 struct SecondView: View {
     var body: some View {
-        Text("second View")
+        Text("Second View")
+    }
+}
+
+struct ThirdView: View {
+    var body: some View {
+        Text("Third View")
     }
 }
 
