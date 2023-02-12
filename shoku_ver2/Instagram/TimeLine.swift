@@ -11,7 +11,7 @@ struct TimeLine: View {
 //    var food: Food
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             VStack{
                 NavigationLink(destination: SecondView()) {
                         HStack{
@@ -64,10 +64,6 @@ struct TimeLine: View {
                         .padding(.horizontal)
                         .background(Color.orange)
                     }
-                    
-                    
-                    
-                }
             }
         }
     }
